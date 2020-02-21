@@ -1,6 +1,9 @@
 ### OCR-for-Russian-documents
 #OCR application for recognition the Russian language text in documents
 
+#Dataset can be found at my Google Drive
+
+
 #Some dependencies and trot-helper
 
 conda install -c anaconda tensorflow-gpu=1.14
