@@ -40,7 +40,7 @@
 
 Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows
 
-
+### Cheats
 (tf_conda_gpu) C:\Users\sondors\Documents\TensorFlow\models\research\object_detection>python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
 
 python legacy/train.py --logtostderr \ --train_dir=training/ \ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
