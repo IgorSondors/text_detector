@@ -1,22 +1,44 @@
-### OCR-for-Russian-documents
-#OCR application for recognition the Russian language text in documents
+# Build dependencies
 
-#Dataset can be found at my Google Drive
+### Tensorflow Object Detection API
 
+- clone [this](https://github.com/tensorflow/models.git) repository
 
-#Some dependencies and trot-helper
+- create training folder
 
-conda install -c anaconda tensorflow-gpu=1.14
+- download model
 
-conda install -c conda-forge matplotlib
+- create config file
 
-conda install -c anaconda pillow
+- create tfrecords and fill data folder with dataset and labels
 
-pip install Cython
+### Conda
 
-pip install pycocotools
+- conda install -c anaconda tensorflow-gpu=1.14
 
-pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+- conda install -c conda-forge matplotlib
+
+- conda install -c anaconda pillow
+
+- pip install Cython
+
+- pip install pycocotools
+
+- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+
+### Clean pip is better
+
+- pip install tensorflow
+
+- pip install tensorflow-gpu
+
+- pip install Cython
+
+- pip install pycocotools
+
+- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+
+Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows
 
 
 (tf_conda_gpu) C:\Users\sondors\Documents\TensorFlow\models\research\object_detection>python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
