@@ -46,7 +46,7 @@ Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cud
 
 ### Cheats
 
-#### All commands should use from terminal in object_detection directory
+#### All commands should use from terminal inside object_detection directory
 
 - cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
 
