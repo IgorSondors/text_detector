@@ -24,7 +24,6 @@
 
 - python legacy/eval.py \ --logtostderr \ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config \ --checkpoint_dir=training/ \ --eval_dir=eval/
 
-
 #### To visualize the eval results
 - tensorboard --logdir=eval/
 
@@ -34,6 +33,10 @@
 #### To get pb-file of model
 
 - python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix training/model.ckpt-85000 --output_directory ssd_mobilenet_v1_coco\saved_model
+
+#### Data augmentation modes
+
+Check [this](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto) out
 
 # Build dependencies
 
