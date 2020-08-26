@@ -8,4 +8,10 @@
 
 - Labels should download as csv files and modify those as this
 
+| class        | fileName           | height  |			width|	xmax|	xmin|	ymax|	ymin|	text|
+| ------------- |:-------------:| -----:|| ------------- |:-------------:| -----:|| ------------- |:-------------:| -----:|
+
+|rect|	1.jpg|	31|	326|	611|	285|	117|	86|	25 ОТДЕЛОМ МИЛИЦИИ|
+
+
 - Create Train folder for files mentioned in Train.csv, copy files there. Do the same for Test folder similarly
