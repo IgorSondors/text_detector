@@ -1,3 +1,5 @@
+![](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/structure.jpeg)
+
 ### How to generate tfrecords
 
 - It is necessary to collect data and do some preprocessing with it for real case similarity purpose
