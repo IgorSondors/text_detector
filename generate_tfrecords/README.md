@@ -12,5 +12,8 @@ class| fileName| height|width|xmax|	xmin|	ymax|	ymin|	text
  ---| ---| ---| ---| ---| ---| ---| ---| ---
 rect|	1.jpg|	31|	326|	611|	285|	117|	86|	25 ОТДЕЛОМ МИЛИЦИИ
 
-
 - Create Train folder for files mentioned in Train.csv, copy files there. Do the same for Test folder similarly
+
+- Execute [this](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/generate_tfrecord.py) script with using TF1.* or [this](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/TF2_generate_tfrecord.py) using TF2.*
+
+- Move received tfrecords and [class_file](https://github.com/IgorSondors/text_detector/blob/master/object-detection.pbtxt) to [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) folder
