@@ -92,7 +92,7 @@ Download the model via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPW
 
 ### Mobilenet SSD
 
-You can chose the model inside of this repository. Good model is [here](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb)
+You can chose the model inside of this repository. Good model is [here](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb). This model was trained with [this](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) configs for 32k global steps
 
 ### SSD EfficentDet
 
