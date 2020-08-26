@@ -4,13 +4,15 @@
 
 - clone [this](https://github.com/tensorflow/models.git) repository
 
-- create training folder
+- use [protobuf](https://developers.google.com/protocol-buffers/) for converting proto files to python scripts in [protos folder](https://github.com/tensorflow/models/tree/master/research/object_detection/protos)
 
-- download model
+- download the [model](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) you chose
 
-- create config file
+- [download](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config file for your model, change hyperparameters and write all paths inside it
 
-- create tfrecords and fill data folder with dataset and labels
+- create training folder inside [object_detection folder](https://github.com/tensorflow/models/tree/master/research/object_detection) fill it with config file
+
+- create tfrecords and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format) and labels (csv files)
 
 ### Conda
 
