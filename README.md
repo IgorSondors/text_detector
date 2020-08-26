@@ -1,3 +1,40 @@
+### Cheats
+
+#### All commands should use from terminal inside object_detection directory
+
+- cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
+
+#### Train EfficentDet
+
+- python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
+
+- python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
+
+#### Train Mobilenet
+
+- python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
+
+#### Для запуска eval параллельно с обучением:
+
+- CUDA_VISIBLE_DEVICES="" python legacy/eval.py \ --logtostderr \ --checkpoint_dir=training \ --pipeline_config_path=pack_detector/models/ssd_mobilenet_v1/ssd_mobilenet_v1_pack.config \ --eval_dir=test
+
+- tensorboard --logdir=C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
+
+#### Запуск eval:
+
+- python legacy/eval.py \ --logtostderr \ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config \ --checkpoint_dir=training/ \ --eval_dir=eval/
+
+
+#### To visualize the eval results
+- tensorboard --logdir=eval/
+
+#### TO visualize the training results
+- tensorboard --logdir=training/
+
+#### To get pb-file of model
+
+- python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix training/model.ckpt-85000 --output_directory ssd_mobilenet_v1_coco\saved_model
+
 # Build dependencies
 
 ### Tensorflow Object Detection API
@@ -43,43 +80,6 @@
 - pip install pandas
 
 Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows
-
-### Cheats
-
-#### All commands should use from terminal inside object_detection directory
-
-- cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
-
-#### Train EfficentDet
-
-- python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
-
-- python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
-
-#### Train Mobilenet
-
-- python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
-
-#### Для запуска eval параллельно с обучением:
-
-- CUDA_VISIBLE_DEVICES="" python legacy/eval.py \ --logtostderr \ --checkpoint_dir=training \ --pipeline_config_path=pack_detector/models/ssd_mobilenet_v1/ssd_mobilenet_v1_pack.config \ --eval_dir=test
-
-- tensorboard --logdir=C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
-
-#### Запуск eval:
-
-- python legacy/eval.py \ --logtostderr \ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config \ --checkpoint_dir=training/ \ --eval_dir=eval/
-
-
-#### To visualize the eval results
-- tensorboard --logdir=eval/
-
-#### TO visualize the training results
-- tensorboard --logdir=training/
-
-#### To get pb-file of model
-
-- python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix training/model.ckpt-85000 --output_directory ssd_mobilenet_v1_coco\saved_model
 
 # Models that is ready for use
 
