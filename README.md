@@ -40,6 +40,38 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 
 # Build dependencies
 
+### Create virtual environment with using conda or pip
+
+#### Conda
+
+- conda install -c anaconda tensorflow-gpu=1.14
+
+- conda install -c conda-forge matplotlib
+
+- conda install -c anaconda pillow
+
+- pip install Cython
+
+- pip install pycocotools
+
+- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+
+#### Clean pip is better
+
+- pip install tensorflow
+
+- pip install tensorflow-gpu
+
+- pip install Cython
+
+- pip install pycocotools
+
+- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+
+- pip install pandas
+
+Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows
+
 ### Tensorflow Object Detection API
 
 - clone [this](https://github.com/tensorflow/models.git) repository
@@ -55,36 +87,6 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 - generate [tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format)
 
 Now you are ready for training process. Check Cheats section above
-
-### Conda
-
-- conda install -c anaconda tensorflow-gpu=1.14
-
-- conda install -c conda-forge matplotlib
-
-- conda install -c anaconda pillow
-
-- pip install Cython
-
-- pip install pycocotools
-
-- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
-
-### Clean pip is better
-
-- pip install tensorflow
-
-- pip install tensorflow-gpu
-
-- pip install Cython
-
-- pip install pycocotools
-
-- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
-
-- pip install pandas
-
-Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows
 
 # Models that is ready for use
 
