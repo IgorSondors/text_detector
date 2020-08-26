@@ -46,15 +46,19 @@ Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cud
 
 ### Cheats
 
-- cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
+#### All commands should use from terminal in object_detection directory
 
-- python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
+- cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
 
 #### Train EfficentDet
 
 - python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
 
 - python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
+
+#### Train Mobilenet
+
+- python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
 
 #### Для запуска eval параллельно с обучением:
 
