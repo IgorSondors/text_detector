@@ -52,7 +52,9 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 
 - create training folder inside [object_detection folder](https://github.com/tensorflow/models/tree/master/research/object_detection) fill it with config file
 
-- generate [tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format) and labels (csv files)
+- generate [tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format)
+
+Now you are ready for training process. Check Cheats section above
 
 ### Conda
 
