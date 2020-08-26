@@ -71,5 +71,10 @@ tensorboard --logdir=training/
 
 python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix training/model.ckpt-85000 --output_directory ssd_mobilenet_v1_coco\saved_model
 
+### Faster_RCNN
 
-download the Faster_RCNN model via link https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing
+Download the model via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing)
+
+### Mobilenet SSD
+
+You can chose the model inside of this repository. Good model is [here](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb)
