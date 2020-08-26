@@ -50,14 +50,17 @@ Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cud
 
 - python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
 
+#### Train EfficentDet
+
+- python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
+
+- python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
 
 #### Для запуска eval параллельно с обучением:
 
 - CUDA_VISIBLE_DEVICES="" python legacy/eval.py \ --logtostderr \ --checkpoint_dir=training \ --pipeline_config_path=pack_detector/models/ssd_mobilenet_v1/ssd_mobilenet_v1_pack.config \ --eval_dir=test
 
-tensorboard --logdir=C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
-
-
+- tensorboard --logdir=C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
 
 #### Запуск eval:
 
