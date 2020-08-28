@@ -100,4 +100,4 @@ You can chose the model inside of this repository. Good model is [here](https://
 
 ### SSD EfficentDet
 
-In progress
+Download the model via [link](https://drive.google.com/drive/folders/13J2zvihwHqyxmsTtWH4QU_9b5r9oxNL5?usp=sharing)
