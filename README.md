@@ -92,12 +92,12 @@ Now you are ready for training process. Check Cheats section above
 
 ### Faster_RCNN
 
-Download the model via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing). This model was trained with [this](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) configs for 32k global steps
+Download the weights via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing). This model was trained with [this](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) configs for 32k global steps
 
 ### Mobilenet SSD
 
-You can chose the model inside of this repository. Good model is [here](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb).
+You can chose the model inside of this repository. Good model weights is [here](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb).
 
 ### SSD EfficentDet
 
-Download the model via [link](https://drive.google.com/drive/folders/13J2zvihwHqyxmsTtWH4QU_9b5r9oxNL5?usp=sharing)
+Download the weights via [link](https://drive.google.com/drive/folders/13J2zvihwHqyxmsTtWH4QU_9b5r9oxNL5?usp=sharing)
