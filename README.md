@@ -92,7 +92,7 @@ Now you are ready for training process. Check Cheats section above
 
 ### Faster_RCNN
 
-Download the weights via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing). This model was trained with [this](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) configs for 32k global steps
+Download the weights via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing). This model was trained with [this](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) configs for 32k global steps. Saved_model and weights for fine tuning via [link](https://drive.google.com/file/d/1K4k6xtebwUEpAQeSHLPx1m3MynHhQHjZ/view?usp=sharing)
 
 ### Mobilenet SSD
 
