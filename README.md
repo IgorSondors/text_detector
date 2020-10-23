@@ -77,7 +77,9 @@ If you want to check possibility of training model on GPU execute [this](https:/
 - clone [this](https://github.com/tensorflow/models.git) repository
 
 - use [protobuf](https://developers.google.com/protocol-buffers/) for converting proto files to python scripts inside [protos folder](https://github.com/tensorflow/models/tree/master/research/object_detection/protos)
-
+```python
+protoc object_detection/protos/*.proto --python_out=.
+```
 - download the [model](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) you chose
 
 - [download](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config file for your model, change hyperparameters and write all paths inside it
