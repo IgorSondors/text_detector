@@ -99,7 +99,7 @@ If you want to check possibility of training model on GPU execute [this](https:/
 ```python
 protoc object_detection/protos/*.proto --python_out=.
 ```
-- download the [model](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) you chose
+- download the [model TF2](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) or [[model TF1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md) you chose
 
 - [download](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config file for your model, change hyperparameters and write all paths inside it
 
