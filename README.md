@@ -7,7 +7,7 @@ cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
 ```
 ### TF1
 
-#### Train Mobilenet
+#### Train TF1 example (Mobilenet)
 
 ```python
 python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
@@ -39,7 +39,7 @@ python export_inference_graph.py --input_type image_tensor --pipeline_config_pat
 
 ### TF2
 
-#### Train EfficentDet
+#### Train example TF2 (EfficentDet)
 
 ```python
 python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
