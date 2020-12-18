@@ -64,34 +64,53 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 
 #### Conda + pip (easy for installation)
 
-- ```
+- run commands below in CMD/terminal
+
+```
 conda install -c anaconda tensorflow-gpu=1.15
 ```
 
-- conda install -c conda-forge matplotlib
+```
+conda install -c conda-forge matplotlib
+```
+```
+conda install -c anaconda pillow
+```
 
-- conda install -c anaconda pillow
+```
+pip install Cython
+```
 
-- pip install Cython
+```
+pip install pycocotools
+```
 
-- pip install pycocotools
-
-- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+```
+pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+```
 
 #### Single pip (better choice)
 
-- pip install tensorflow
+- run commands below in CMD/terminal
 
-- pip install tensorflow-gpu
-
-- pip install Cython
-
-- pip install pycocotools
-
-- pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
-
-- pip install pandas
-
+```
+pip install tensorflow
+```
+```
+pip install tensorflow-gpu
+```
+```
+pip install Cython
+```
+```
+pip install pycocotools
+```
+```
+pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+```
+```
+pip install pandas
+```
 - Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). Check [another CUDA documentation]([CUDA Toolkit documentation]) if your choice is Ubuntu OS
 
 If you want to check possibility of training model on GPU execute [this program](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
