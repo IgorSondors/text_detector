@@ -1,6 +1,6 @@
 ## Комманды для обучения детектора
 
-#### Все команды следует вводить в терминале открытого из папки object_detection. Перед их использованием создайте виртуальное окружение и скачайте TF API
+#### Все команды следует вводить в терминале открытого из папки object_detection. Перед их использованием создайте виртуальное окружение, скачайте TF API и сгенерируйте tfrecords
 
 ```python
 cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
@@ -60,7 +60,7 @@ python exporter_main_v2.py \ --input_type image_tensor \ --pipeline_config_path 
 
 ## Необходимые требования перед использованием команд для тренировки сети
 
-### 1) Создать виртуальное окружение используя conda или pip
+### 1) Создание виртуального окружения с помощью conda или pip
 
 #### Conda + pip (простая установка)
 
@@ -130,6 +130,8 @@ protoc object_detection/protos/*.proto --python_out=.
 - [Скачайте](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config файл вашей модели, измените гиперпараметры обучения нейросети и задайте необходимые пути
 
 - Создайте папку training внутри [object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection), переместите в нее config файл
+
+### 3) Генерация tfrecords
 
 - [Сгенерируйте tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) и переместите в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) датасет (в формате tfrecord)
 
