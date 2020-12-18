@@ -6,7 +6,7 @@
 
 - Датасет нужно разметить, для этого может подойти приложение [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/via.html)
 
-- Разметку стоит перевести в csv формат и привести ее к следующему виду
+- Разметку стоит перевести в csv формат и привести ее к следующему формату
 
 class| fileName| height|width|xmax|	xmin|	ymax|	ymin|	text
  ---| ---| ---| ---| ---| ---| ---| ---| ---
