@@ -25,7 +25,7 @@ python legacy/eval.py \ --logtostderr \ --pipeline_config_path=training/ssd_mobi
 tensorboard --logdir=eval/
 ```
 
-#### TO visualize the training results
+#### To visualize the training results
 
 ```python
 tensorboard --logdir=training/
