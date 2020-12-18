@@ -69,22 +69,21 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 ```
 conda install -c anaconda tensorflow-gpu=1.15
 ```
-
 ```
 conda install -c conda-forge matplotlib
 ```
 ```
 conda install -c anaconda pillow
 ```
-
 ```
 pip install Cython
 ```
-
 ```
 pip install pycocotools
 ```
-
+```
+pip install pandas
+```
 ```
 pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
@@ -106,10 +105,10 @@ pip install Cython
 pip install pycocotools
 ```
 ```
-pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
-```
-```
 pip install pandas
+```
+```
+pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
 - Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). Check [another CUDA documentation]([CUDA Toolkit documentation]) if your choice is Ubuntu OS
 
