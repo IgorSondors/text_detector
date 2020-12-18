@@ -18,4 +18,4 @@ rect|	1.jpg|	31|	326|	611|	285|	117|	86|	25 ОТДЕЛОМ МИЛИЦИИ
 
 - Для создания tfrecords используйте [этот](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/generate_tfrecord.py) скрипт для TF1.* бэкенда или [этот](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/TF2_generate_tfrecord.py) для TF2.*
 
-- MПереместите полученные tfrecords и [файл класса](https://github.com/IgorSondors/text_detector/blob/master/object-detection.pbtxt) в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data)
+- Переместите полученные tfrecords и [файл класса](https://github.com/IgorSondors/text_detector/blob/master/object-detection.pbtxt) в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data)
