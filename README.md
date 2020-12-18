@@ -1,37 +1,37 @@
 ## Комманды для обучения детектора
 
-#### All commands for training should use from terminal opened inside object_detection directory
+#### Все команды следует вводить в терминале открытого из папки object_detection
 
 ```python
 cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
 ```
 ### TF1
 
-#### Train TF1 example (Mobilenet)
+#### Пример обучения на TF1 бэкенде (Mobilenet)
 
 ```python
 python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
 ```
 
-#### Запуск eval:
+#### Запуск evaluation:
 
 ```python
 python legacy/eval.py \ --logtostderr \ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config \ --checkpoint_dir=training/ \ --eval_dir=eval/
 ```
 
-#### To visualize the eval results
+#### Визуализация работы детектора на валидационных данных
 
 ```python
 tensorboard --logdir=eval/
 ```
 
-#### To visualize the training results
+#### Визуализация работы детектора на тренировочных данных
 
 ```python
 tensorboard --logdir=training/
 ```
 
-#### To get frozen_inference_graph.pb of TF1 model
+#### Для получения frozen_inference_graph.pb файла с замороженными весами сети пригодного для TF1 модели
 
 ```python
 python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix training/model.ckpt-85000 --output_directory ssd_mobilenet_v1_coco\saved_model
@@ -39,7 +39,7 @@ python export_inference_graph.py --input_type image_tensor --pipeline_config_pat
 
 ### TF2
 
-#### Train example TF2 (EfficentDet)
+#### Пример обучения на TF2 бэкенде (EfficentDet)
 
 ```python
 python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
@@ -48,23 +48,23 @@ python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896
 python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
 ```
 
-#### To get saved_model.pb of TF2 model
+#### Для получения saved_model.pb файла с весами сети пригодного для TF2 модели
 
 ```python
 python exporter_main_v2.py \ --input_type image_tensor \ --pipeline_config_path training/ssd_efficientdet_d3_896x896.config \ --trained_checkpoint_dir training \ --output_directory efficientdet_d3_coco17_tpu-32/saved_mode
 ```
 
-#### Data augmentation modes
+#### Для использования исскуственного расширения данных
 
-Check [this](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto) out
+Смотрите [этот](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto) репозиторий
 
-## Training commands preconditions
+## Необходимые требования для использования комманд для тренировки сети
 
-### 1) Create virtual environment with using conda either with pip
+### 1) Создать виртуальное окружение используя conda или pip
 
-#### Conda + pip (easy for installation)
+#### Conda + pip (простая установка)
 
-- run commands below in CMD/terminal
+- Введите следующие команды в CMD/terminal
 
 ```
 conda install -c anaconda tensorflow-gpu=1.15
@@ -88,9 +88,9 @@ pip install pandas
 pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
 
-#### Single pip (better choice)
+#### Чистый pip (лучше, но сложнее в установке)
 
-- run commands below in CMD/terminal
+- Введите следующие команды в CMD/terminal
 
 ```
 pip install tensorflow
@@ -110,22 +110,22 @@ pip install pandas
 ```
 pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
-- Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). Check [another CUDA documentation]([CUDA Toolkit documentation]) if your choice is Ubuntu OS
+- Следуйте [этим](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) инструкциям для построения CUDA и Cudnn зависимостей, если вы используете Windows или смотрите официальную документацию [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). При использовании Ubuntu нужная ссылка [another CUDA documentation]([CUDA Toolkit documentation]) вместо предыдущих
 
-If you want to check possibility of training model on GPU execute [this program](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
+Для проверки возможности запуска кода на GPU в вашем виртуальном окружении запустите [эту программу](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
 
 ### 2) Tensorflow Object Detection API
 
-- clone [this](https://github.com/tensorflow/models.git) repository
+- Клонируйте [этот](https://github.com/tensorflow/models.git) репозиторий
 ```
 git clone https://github.com/tensorflow/models.git
 ```
 
-- use [protobuf](https://developers.google.com/protocol-buffers/) for converting proto files to python scripts inside [protos folder](https://github.com/tensorflow/models/tree/master/research/object_detection/protos)
+- Используйте [protobuf](https://developers.google.com/protocol-buffers/) для конвертации proto файлов в python скрипты внутри [protos папки](https://github.com/tensorflow/models/tree/master/research/object_detection/protos)
 ```python
 protoc object_detection/protos/*.proto --python_out=.
 ```
-- download the [model TF2](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) or [model TF1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md) you chose
+- Загрузите [model TF2](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) или [model TF1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md) в зависимости от вашего выбора бэкенда
 
 - [download](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config file for your model, change hyperparameters and write all paths inside it
 
