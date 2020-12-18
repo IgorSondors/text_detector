@@ -133,21 +133,18 @@ protoc object_detection/protos/*.proto --python_out=.
 
 - [Сгенерируйте tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) и переместите в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) датасет (в формате tfrecord)
 
-При возникновении сложностей с обучением детектора смотрите [туториал](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73)
-Теперь все готово к процессу обучения нейросети детектора текста. Используйте команды из секции "Комманды для обучения детектора"
+Теперь все готово к процессу обучения нейросети детектора текста. Используйте команды из секции "Комманды для обучения детектора". При возникновении сложностей с обучением детектора смотрите [туториал](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73)
 
 # Графы сетей готовых к использованию
 
-Instead of training your custom text_detector model you can use one of few models below 
-
 ### Faster_RCNN
 
-Download the weights via [link](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing). This model was trained with [this](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) configs for 32k global steps. Saved_model and weights for fine tuning via [link](https://drive.google.com/file/d/1K4k6xtebwUEpAQeSHLPx1m3MynHhQHjZ/view?usp=sharing)
+Скачать веса этой архитектуры можно по [ссылке](https://drive.google.com/file/d/1LFpO1DsDm2EHcYFPWQfAikgnHQ3mNPGm/view?usp=sharing). Модель обучена с такими [гиперпараметрами](https://github.com/IgorSondors/text_detector/blob/master/faster_rcnn_resnet101_coco.config) на 32k global steps. Saved_model и для тонкой настройки по данной [ссылке](https://drive.google.com/file/d/1K4k6xtebwUEpAQeSHLPx1m3MynHhQHjZ/view?usp=sharing)
 
 ### Mobilenet SSD
 
-You can chose the model inside of this repository. Good model weights is [here](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb).
+Возможно выбрать одну из моделей этой архитектуры в данном репозитории. Веса лучшей модели [здесь](https://github.com/IgorSondors/OCR-for-Russian-documents/blob/master/frozen_inference_graph.pb).
 
 ### SSD EfficentDet
 
-Download the weights via [link](https://drive.google.com/drive/folders/13J2zvihwHqyxmsTtWH4QU_9b5r9oxNL5?usp=sharing)
+Скачать веса можно по [ссылке](https://drive.google.com/drive/folders/13J2zvihwHqyxmsTtWH4QU_9b5r9oxNL5?usp=sharing)
