@@ -64,7 +64,9 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 
 #### Conda + pip (easy for installation)
 
-- conda install -c anaconda tensorflow-gpu=1.15
+- ```
+conda install -c anaconda tensorflow-gpu=1.15
+```
 
 - conda install -c conda-forge matplotlib
 
