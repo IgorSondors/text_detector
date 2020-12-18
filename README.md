@@ -58,13 +58,13 @@ python exporter_main_v2.py \ --input_type image_tensor \ --pipeline_config_path 
 
 Check [this](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto) out
 
-# Build dependencies
+## Training commands preconditions
 
-### Create virtual environment with using conda or pip
+### 1) Create virtual environment with using conda either with pip
 
 #### Conda
 
-- conda install -c anaconda tensorflow-gpu=1.14
+- conda install -c anaconda tensorflow-gpu=1.15
 
 - conda install -c conda-forge matplotlib
 
@@ -92,9 +92,9 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 
 - Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/
 
-If you want to check possibility of training model on GPU execute [this](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
+If you want to check possibility of training model on GPU execute [this program](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
 
-### Tensorflow Object Detection API
+### 2) Tensorflow Object Detection API
 
 - clone [this](https://github.com/tensorflow/models.git) repository
 
@@ -110,7 +110,8 @@ protoc object_detection/protos/*.proto --python_out=.
 
 - [generate tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format)
 
-Now you are ready for training process. Check Cheats section above
+You can check [this tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73), if you have difficulties with using text_detector repo
+Now you are ready for training process. Check "Commands for training" section above
 
 # Models that is ready for use
 
