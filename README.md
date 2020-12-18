@@ -1,4 +1,4 @@
-## Commands for training
+## Комманды для обучения детектора
 
 #### All commands for training should use from terminal opened inside object_detection directory
 
