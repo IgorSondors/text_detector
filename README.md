@@ -133,7 +133,7 @@ protoc object_detection/protos/*.proto --python_out=.
 
 ### 3) Генерация tfrecords
 
-- [Сгенерируйте tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) и переместите в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) датасет (в формате tfrecord)
+- [Сгенерируйте tfrecords](https://github.com/IgorSondors/text_detector/tree/IgorSondors-README_RUS/generate_tfrecords) и переместите в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) датасет (в формате tfrecord)
 
 Теперь все готово к процессу обучения нейросети детектора текста. Используйте команды из секции "Комманды для обучения детектора". При возникновении сложностей с обучением детектора смотрите [туториал](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73)
 
