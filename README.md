@@ -1,6 +1,6 @@
 ## Комманды для обучения детектора
 
-#### Все команды следует вводить в терминале открытого из папки object_detection
+#### Все команды следует вводить в терминале открытого из папки object_detection. Перед их использованием создайте виртуальное окружение и скачайте TF API
 
 ```python
 cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
