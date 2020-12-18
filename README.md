@@ -1,6 +1,6 @@
 ## Commands for training
 
-#### All commands should use from terminal inside object_detection directory
+#### All commands for training should use from terminal inside object_detection directory
 
 ```python
 cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
