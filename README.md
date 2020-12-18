@@ -1,4 +1,4 @@
-# Commands for training
+## Commands for training
 
 #### All commands should use from terminal inside object_detection directory
 
