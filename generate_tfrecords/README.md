@@ -1,21 +1,21 @@
 ![](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/structure.jpeg)
 
-### How to generate tfrecords
+### Генерация tfrecords
 
-- It is necessary to collect data and do some preprocessing with it for real case similarity purpose
+- Небходимо собрать данные и сделать их похожими на те, что будут встречаться в реальной работе детектора. Для препроцессинга данных, в частности перспективного преобразования используйте [эту](https://github.com/IgorSondors/CV-preprocessing/blob/master/warp_4clics.py) программу
 
-- Dataset should be labelled with one of the annotators app. [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/via.html) is suitable
+- Датасет нужно разметить, для этого может подойти приложение [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/via.html)
 
-- Labels should download as csv files and modify those as this
+- Разметку стоит перевести в csv формат и привести ее к следующему виду
 
 class| fileName| height|width|xmax|	xmin|	ymax|	ymin|	text
  ---| ---| ---| ---| ---| ---| ---| ---| ---
 rect|	1.jpg|	31|	326|	611|	285|	117|	86|	25 ОТДЕЛОМ МИЛИЦИИ
 
-- [It](https://github.com/IgorSondors/cv-trash/blob/master/static_str_delete.py) might help to clear csv
+- [Эта](https://github.com/IgorSondors/cv-trash/blob/master/static_str_delete.py) программа может помочь почистить csv файл
 
-- Create Train folder for files mentioned in Train.csv, copy files there. Do the same for Test folder similarly
+- Датасет нужно разделить на Train.csv и Test.csv, создать папки Train и Test, в которые далее переместить размеченные картинки согласно присутствию в соответствующем csv файле. Рекомендованное разделение на Train/Test - 90/10, в виду малого количества данных
 
-- Execute [this](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/generate_tfrecord.py) script with using TF1.* or [this](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/TF2_generate_tfrecord.py) using TF2.*
+- Для создания tfrecords используйте [этот](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/generate_tfrecord.py) скрипт для TF1.* бэкенда или [этот](https://github.com/IgorSondors/text_detector/blob/master/generate_tfrecords/TF2_generate_tfrecord.py) для TF2.*
 
-- Move received tfrecords and [class_file](https://github.com/IgorSondors/text_detector/blob/master/object-detection.pbtxt) to [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) folder
+- MПереместите полученные tfrecords и [файл класса](https://github.com/IgorSondors/text_detector/blob/master/object-detection.pbtxt) в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data)
