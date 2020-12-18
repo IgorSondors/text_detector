@@ -1,19 +1,11 @@
-### Cheats
+# Commands for training
 
 #### All commands should use from terminal inside object_detection directory
 
 ```python
 cd C:\Users\sondors\Documents\TensorFlow\models\research\object_detection
 ```
-
-#### Train EfficentDet
-
-```python
-python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
-```
-```python
-python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
-```
+### TF1
 
 #### Train Mobilenet
 
@@ -43,6 +35,17 @@ tensorboard --logdir=training/
 
 ```python
 python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_mobilenet_v1_coco.config --trained_checkpoint_prefix training/model.ckpt-85000 --output_directory ssd_mobilenet_v1_coco\saved_model
+```
+
+### TF2
+
+#### Train EfficentDet
+
+```python
+python model_main_tf2.py --pipeline_config_path=training\ssd_efficientdet_d3_896x896.config --model_dir=training --num_train_steps=50000 --sample_1_of_n_eval_examples=1 --alsologtostderr
+```
+```python
+python model_main.py --model_dir=train --pipeline_config_path=training/ssd_efficientdet_d3_896x896.config --alsologtostderr --num_train_steps=80000 --num_eval_steps=1000
 ```
 
 #### To get saved_model.pb of TF2 model
