@@ -118,6 +118,9 @@ If you want to check possibility of training model on GPU execute [this program]
 ### 2) Tensorflow Object Detection API
 
 - clone [this](https://github.com/tensorflow/models.git) repository
+```
+git clone https://github.com/tensorflow/models.git
+```
 
 - use [protobuf](https://developers.google.com/protocol-buffers/) for converting proto files to python scripts inside [protos folder](https://github.com/tensorflow/models/tree/master/research/object_detection/protos)
 ```python
