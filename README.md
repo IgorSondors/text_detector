@@ -131,6 +131,8 @@ protoc object_detection/protos/*.proto --python_out=.
 
 - create training folder inside [object_detection folder](https://github.com/tensorflow/models/tree/master/research/object_detection) fill it with config file
 
+### 3) Tfrecords generation
+
 - [generate tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format)
 
 You can check [this tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73), if you have difficulties with using text_detector repo
