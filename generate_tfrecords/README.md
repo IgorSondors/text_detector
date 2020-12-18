@@ -2,7 +2,7 @@
 
 ### How to generate tfrecords
 
-- It is necessary to collect data and do some preprocessing with it for real case similarity purpose
+- It is necessary to collect data and do some preprocessing with it for real case similarity purpose. Do perspective transformation for data preprocessing with [this](https://github.com/IgorSondors/CV-preprocessing/blob/master/warp_4clics.py) program
 
 - Dataset should be labelled with one of the annotators app. [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/via.html) is suitable
 
