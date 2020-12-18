@@ -90,7 +90,7 @@ Check [this](https://github.com/tensorflow/models/blob/master/research/object_de
 
 - pip install pandas
 
-- Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)
+- Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). Check [another CUDA documentation]([CUDA Toolkit documentation]) if your choice is Ubuntu OS
 
 If you want to check possibility of training model on GPU execute [this program](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
 
