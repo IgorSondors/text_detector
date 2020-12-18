@@ -58,7 +58,7 @@ python exporter_main_v2.py \ --input_type image_tensor \ --pipeline_config_path 
 
 Смотрите [этот](https://github.com/tensorflow/models/blob/master/research/object_detection/protos/preprocessor.proto) репозиторий
 
-## Необходимые требования для использования комманд для тренировки сети
+## Необходимые требования перед использованием команд для тренировки сети
 
 ### 1) Создать виртуальное окружение используя conda или pip
 
@@ -127,16 +127,16 @@ protoc object_detection/protos/*.proto --python_out=.
 ```
 - Загрузите [model TF2](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) или [model TF1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md) в зависимости от вашего выбора бэкенда
 
-- [download](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config file for your model, change hyperparameters and write all paths inside it
+- [Скачайте](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) config файл вашей модели, измените гиперпараметры обучения нейросети и задайте необходимые пути
 
-- create training folder inside [object_detection folder](https://github.com/tensorflow/models/tree/master/research/object_detection) fill it with config file
+- Создайте папку training внутри [object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection), переместите в нее config файл
 
-- [generate tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) and fill [data folder](https://github.com/tensorflow/models/tree/master/research/object_detection/data) with dataset (in the tfrecord format)
+- [Сгенерируйте tfrecords](https://github.com/IgorSondors/OCR-for-Russian-documents/tree/master/generate_tfrecords) и переместите в папку [data](https://github.com/tensorflow/models/tree/master/research/object_detection/data) датасет (в формате tfrecord)
 
-You can check [this tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73), if you have difficulties with using text_detector repo
-Now you are ready for training process. Check "Commands for training" section above
+При возникновении сложностей с обучением детектора смотрите [туториал](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73)
+Теперь все готово к процессу обучения нейросети детектора текста. Используйте команды из секции "Комманды для обучения детектора"
 
-# Models that is ready for use
+# Графы сетей готовых к использованию
 
 Instead of training your custom text_detector model you can use one of few models below 
 
