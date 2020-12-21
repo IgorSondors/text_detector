@@ -110,7 +110,7 @@ pip install pandas
 ```
 pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 ```
-- Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). Check [another CUDA documentation]([CUDA Toolkit documentation]) if your choice is Ubuntu OS
+- Follow [this](https://towardsdatascience.com/installing-tensorflow-with-cuda-cudnn-and-gpu-support-on-windows-10-60693e46e781) instructions for building CUDA and Cudnn dependencies if you use Windows/ or check official [CUDA Toolkit documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html). Check [another CUDA documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) if your choice is Ubuntu OS
 
 If you want to check possibility of training model on GPU execute [this program](https://github.com/IgorSondors/cv-trash/blob/master/TFcheck.py)
 
