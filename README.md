@@ -30,6 +30,9 @@ tensorboard --logdir=eval/
 ```python
 tensorboard --logdir=training/
 ```
+#### [Ноутбук](https://github.com/IgorSondors/text_detector/blob/IgorSondors-README_RUS/eval_vis.ipynb) для проверки работы детектора с визуализацией matplotlib
+
+
 
 #### Для получения frozen_inference_graph.pb файла с замороженными весами сети пригодного для TF1 модели
 
